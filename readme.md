@@ -30,13 +30,12 @@
     npm install npm@8.19.2 -g
     ```
     <br>
-3.
-
-
-    ```cmd
+3.  ```cmd
     docker -v
     ```
+
     expected result:
+
     ```cmd
     Docker version 20.10.7, build f0df350
     ```
@@ -58,6 +57,7 @@
 3.  testing?
 
 ### EX
+
 Create the following module:
 
 ```js
@@ -72,7 +72,6 @@ Create the following module:
 ### Async operations - HTTP
 
 - Fetch countries
-
 
 ### Is nodejs is really single threaded?
 
@@ -133,7 +132,6 @@ Create the following module:
 
 ```
 
-
 ### Building our Api - Express
 
 - Open folder api under apps folder
@@ -159,7 +157,7 @@ Create the following module:
 - Connecting to DB
 - Integration test
 
-### EX 
+### EX
 
 - Create The following entry point - GET /countries/code?code=isr
 - Validate the code contains 3 characters, required and only string
@@ -207,8 +205,6 @@ curl --location --request POST 'https://localhost/register' \
 }'
 ```
 
-### 29.9
-
 ## Docker compose up
 
 Before - make sure to load the sql scripts in your local database.
@@ -242,8 +238,6 @@ ssl => false
 ssl_certificate_verification => false
 }
 }'
-
-
 
 # Data
 

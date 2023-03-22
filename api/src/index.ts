@@ -1,4 +1,5 @@
 import * as express from "express";
+import { customersRouter } from "./customers";
 import { mls, mlsNames } from "./middleware";
 const port: number = 3200;
 const app = express();
@@ -11,6 +12,8 @@ app.get("/health-check", (req, res) => {
 
 app.use(mlsNames.auth);
 app.use(mlsNames.printLog);
+
+app.use("/customers", customersRouter);
 
 app.use((err: Error, req: express.Request, res, next) => {
   console.log(`Error in API: `, err.message);

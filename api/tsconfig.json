@@ -1,0 +1,14 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "rootDir": "./src"
+    }
+  },
+  "compilerOptions": {
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "exclude": ["node_modules"]
+}

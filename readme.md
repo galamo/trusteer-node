@@ -137,6 +137,7 @@ Create the following module:
 - Open folder api under apps folder
 - run `npm init`
 - `npm install express`
+- `npm install express @types/express`
 - `npm install dotenv`
 - Using the fileSystem module
 - Writing a middleware
@@ -305,7 +306,8 @@ module.exports = { cars }
 
 ```
 
-<!-- express -->
+
+<!-- express-->
 <!-- build docker -->
 <!-- bundle webpack -->
 <!-- modules -->

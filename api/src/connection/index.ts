@@ -1,9 +1,9 @@
 import * as mysql from "mysql2/promise";
 import * as dotenv from "dotenv";
 dotenv.config();
-const { HOST, PORT, DATABASE, USER, PASSWORD } = process.env;
+const { HOST, PORT, DATABASE, DBUSER, PASSWORD } = process.env;
 
-if (!HOST || !PORT || !DATABASE || !USER || !PASSWORD) {
+if (!HOST || !PORT || !DATABASE || !DBUSER || !PASSWORD) {
   console.log(
     "\x1b[41m\x1b[33m%s\x1b[0m",
     "Missing Environment Variables - Connection MYSQL"
@@ -16,7 +16,7 @@ console.log("Connection running...");
 const pool = mysql.createPool({
   host: HOST,
   port: +PORT,
-  user: USER,
+  user: DBUSER,
   password: PASSWORD,
   connectionLimit: 10,
   database: DATABASE,

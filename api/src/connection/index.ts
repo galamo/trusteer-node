@@ -1,6 +1,9 @@
 import * as mysql from "mysql2/promise";
 import * as dotenv from "dotenv";
 dotenv.config();
+// process.env.UV_THREADPOOL_SIZE = "8";
+// console.log(process.env.UV_THREADPOOL_SIZE);
+
 const { HOST, PORT, DATABASE, DBUSER, PASSWORD } = process.env;
 
 if (!HOST || !PORT || !DATABASE || !DBUSER || !PASSWORD) {
@@ -18,7 +21,7 @@ const pool = mysql.createPool({
   port: +PORT,
   user: DBUSER,
   password: PASSWORD,
-  connectionLimit: 10,
+  connectionLimit: 20,
   database: DATABASE,
 });
 

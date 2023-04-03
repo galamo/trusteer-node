@@ -12,4 +12,15 @@ async function getCustomers(company?: string) {
   // logger
 }
 
-export { getCustomers };
+async function getCustomerById(id: number) {
+  const sql = `select * from customers where id = ?`;
+  const result = await pool.query(sql, [id]); //async operation.
+  const [data] = result;
+  return data;
+  // missing handler
+  // missing connection
+  // missing  try & catch on our entry
+  // logger
+}
+
+export { getCustomers, getCustomerById };

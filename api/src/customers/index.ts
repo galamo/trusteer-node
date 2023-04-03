@@ -1,10 +1,11 @@
 import * as express from "express";
+import { getCustomers } from "./handlers/getCustomers";
 
 const customersRouter = express.Router();
 
-customersRouter.get("/", function (req, res, next) {
-  const customers = [{ name: "michael" }];
-  res.json(customers);
+customersRouter.get("/", async function (req, res, next) {
+  const result = await getCustomers();
+  res.json(result);
 });
 
 customersRouter.get("/search", function (req, res, next) {

@@ -1,4 +1,4 @@
-const token = "liel_dev";
+const token = "1234";
 
 const auth = (req, res, next) => {
   const params = req.query;

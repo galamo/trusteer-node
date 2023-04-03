@@ -306,8 +306,13 @@ module.exports = { cars }
 
 ```
 
+# Today Subjects:
 
-<!-- express-->
+1. Connect to MySQL
+2. Using environment variables
+3. Unit Tests
+4. Integration Tests
+
 <!-- build docker -->
 <!-- bundle webpack -->
 <!-- modules -->
